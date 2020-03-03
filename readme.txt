@@ -1,4 +1,5 @@
 this repository was made to:
--practice using git
--learn coding in python
+-learn using git/github
+-practice coding in python
 
+feel free to leave suggestions about my code or new features!
