@@ -1,5 +1,4 @@
-this repository was made to:
--learn using git/github
--practice coding in python
+this repository was created for
+coding projects in python and java
 
-feel free to leave suggestions about my code or new features!
+feel free to leave suggestions/feedback about my code
