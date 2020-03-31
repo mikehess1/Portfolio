@@ -1,0 +1,1 @@
+This Python program is a number guessing game.  You have to guess a number between 1 and 100.  The program will tell you if the number is higher or lower than your guess.  Continue to guess until you guess the correct number.  Guess correctly and the program will tell you how many guesses you made.

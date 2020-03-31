@@ -1,0 +1,1 @@
+This Python program replicates the classic Pong game.  Use the 'W' and 'S' keys to move the left paddle up and down.  Use the up and down arrows to move the right paddle.

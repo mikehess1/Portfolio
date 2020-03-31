@@ -1,0 +1,1 @@
+This Python program is a dice roller.  Specify how many dice you want to roll and the program will output a random number between 1 and 6 for the number of dice you specified.
