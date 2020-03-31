@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Start head-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <!--Page Title and Icon-->
+    <title>Tip Calculator</title>
+    <link rel="shortcut icon" type="image/png" href="tips.png">
+</head>
+<!--End head-->
+
+<!--Start body-->
+
+<body>
+    <!--Start header-->
+    <header id="main-header" class="bg-info text-white p-1 mb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 id="header-title">Tip Calculator</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--End header-->
+    <!--Start card container-->
+    <div class="container">
+        <div id="main" class="card card-body bg-light p-4">
+            <form action="" id="tipForm">
+                <!--Start Form Fields-->
+                <div class="form-group">
+                    <label for="total">How much was the bill?</label>
+                    <input type="text" name="total" id="total" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="people">How many people are paying?</label>
+                    <input type="text" name="people" id="people" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="service">How was the service?</label>
+                    <select name="service" id="service" class="form-control">
+                        <option hidden disabled selected value=""></option>
+                        <option value="great">Great - 20%</option>
+                        <option value="average">Average - 15%</option>
+                        <option value="poor">Poor - 10%</option>
+                    </select>
+                </div>
+                <!--End Form Fields-->
+                <!--Start Form Buttons-->
+                <div class="form-group">
+                    <input type="submit" class="btn btn-info form-control" value="Submit">
+                </div>
+                <div class="form-group">
+                    <input type="reset" class="btn btn-outline-dark form-control" value="Clear">
+                </div>
+                <!--End form Buttons-->
+            </form>
+            <div id="output">
+                <!--Resulting output goes here-->
+            </div>
+        </div>
+        <!--End card container-->
+        <!--Start Footer-->
+        <div class="text-right">
+            <small class="text-muted">powered by <a href=http://mikehess.net class="text-reset">mikehess.net</a>
+            </small>
+        </div>
+        <!--End Footer-->
+    </div>
+    <!--Reference javascript file-->
+    <script src="script.js"></script>
+</body>
+<!--End body-->
+
+</html>
