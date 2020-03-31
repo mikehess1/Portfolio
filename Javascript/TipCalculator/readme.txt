@@ -1,0 +1,1 @@
+This tip calculator uses HTML, Bootstrap 4 and Javascript to calculate how much tip should be left for services.  Fill out the form and click submit to generate the amount each person should give as a tip.
