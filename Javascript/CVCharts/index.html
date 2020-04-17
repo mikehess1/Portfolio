@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>CV Charts</title>
+    <link rel="shortcut icon" type="image/png" href="virus.png" />
+  </head>
+  <header id="main-header" class="bg-primary text-white p-1 mb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1 id="header-title">
+            <img src="virus.png" width="40rem" class="align-text-bottom" />
+            CV Charts
+          </h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <body>
+    <div class="container">
+      <div class="row p-3 mb-3">
+        <p class="text-justify">This tool provides visual representation of statewide data for Maryland, Florida, Texas and California regarding the COVID-19 virus.  Charts are updated daily at 4pm ET and data is sourced from <a href="https://covidtracking.com/">https://covidtracking.com</a>.  Individual states can be excluded by clicking state abbreviations at the top of each chart.  Best viewed on a computer, tablet or landscape mobile.</p>
+        <p class="text-justify">Please submit any feedback and feature requests to <a href="mailto:hello@mikehess.net">hello@mikehess.net</a>.  Check back for updates as more charts will be added in the coming days.  Be safe, Stay healthy; Wishing everyone the best!</p>
+      </div>
+    <div class="row text-center">
+        
+          <div id="main" class="card card-body bg-light p-4 mb-3">
+            <h2>Total Confirmed Cases</h2>
+            <canvas id="totals"></canvas>
+            <p class="card-text text-justify">
+              This graph shows the total number of COVID-19 confirmed cases per state over
+              time. Ideal scenario occurs when the lines flatten out.
+            </p>
+          </div>
+
+          <div id="main" class="card card-body bg-light p-4 mb-3">
+            <h2>Cases by % Population</h2>
+            <canvas id="percents"></canvas>
+            <p class="card-text text-justify">
+              This graph shows the percent of each state's population testing positive for COVID-19.
+            </p>
+          </div>
+
+          <div id="main" class="card card-body bg-light p-4">
+            <h2>Daily New Cases</h2>
+            <canvas id="cpd"></canvas>
+            <p class="card-text text-justify">
+              This graph shows the number of new COVID-19 confirmed cases each day per state. Ideal scenario occurs when the bars fall toward zero.
+            </p>
+          </div>
+        
+        <div class="text-right ml-auto">
+            <small class="text-muted">powered by <a href=http://mikehess.net class="text-reset">mikehess.net</a></small>
+        </div>
+    </div>
+   
+</div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
