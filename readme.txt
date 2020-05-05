@@ -1,6 +1,6 @@
-this repository was created for projects to learn and practice coding in python, java, javascript, etc
+This repository was created for projects to learn and practice coding in Python, Java, Javascript, etc.
 
-feel free to provide feedback, thanks!!
+Feel free to provide feedback. Thanks!!
 
 -Mike
 mikehess.net
