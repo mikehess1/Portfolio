@@ -17,9 +17,8 @@ sound = 'sound.wav'
 red = '\033[31m'
 wht = '\033[0m'
 
+
 # Returns int: Current highest block number
-
-
 def getHeight():
     call = api_url + height
     return requests.get(call).json()
@@ -48,22 +47,28 @@ def printTime(seconds):
 
 
 if __name__ == '__main__':
+    # Clear terminal
     os.system('clear')
 
+    # Get and print current block height
     thisBlock = getHeight()
     print('CURRENT BLOCK:   ' + str(thisBlock))
     playsound('/Users/mike/Desktop/' + sound)
 
+    # Get current seconds since last block
     seconds = getTimeSinceBlock()
 
     while True:
+        # Pause, increment 1 second and print
+        sleep(1)
+        seconds += 1
         printTime(seconds)
 
         # Check for new block every 15 seconds
         if seconds % 15 == 0:
             response = getHeight()
 
-            # If new block is mined
+            # If new block is found
             if response > thisBlock:
                 # Calculate and print elapsed block time
                 elapsed = seconds
@@ -74,6 +79,3 @@ if __name__ == '__main__':
                 thisBlock = response
                 print('\nNEW BLOCK MINED: ' + str(thisBlock))
                 playsound('/Users/mike/Desktop/' + sound)
-
-        sleep(1)
-        seconds += 1
