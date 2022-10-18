@@ -1,7 +1,6 @@
 #!/bin/python3
 
 import os
-import sys
 import requests
 from time import sleep, time
 from datetime import timedelta
@@ -46,6 +45,14 @@ def printTime(seconds):
     print('\r\033[K' + output, end='')
 
 
+# Attempts to play sound or throws exception
+def play(file):
+    try:
+        playsound(file)
+    except:
+        print('Failed to play ' + sound)
+
+
 if __name__ == '__main__':
     # Clear terminal
     os.system('clear')
@@ -53,7 +60,7 @@ if __name__ == '__main__':
     # Get and print current block height
     thisBlock = getHeight()
     print('CURRENT BLOCK:   ' + str(thisBlock))
-    playsound('/Users/mike/Desktop/' + sound)
+    play(sound)
 
     # Get current seconds since last block
     seconds = getTimeSinceBlock()
@@ -78,4 +85,4 @@ if __name__ == '__main__':
                 # Update and print new block height
                 thisBlock = response
                 print('\nNEW BLOCK MINED: ' + str(thisBlock))
-                playsound('/Users/mike/Desktop/' + sound)
+                play(sound)
