@@ -19,13 +19,13 @@ wht = '\033[0m'
 
 # Initialize environment
 def initialize():
+    # Get file path for sound
+    global sound
+    dir = os.path.dirname(os.path.realpath(__file__))
+    sound = dir + sound
+
     # Clear terminal window
     os.system('clear')
-
-    # Get file path for sound
-    dir = os.path.dirname(os.path.realpath(__file__))
-    global sound
-    sound = dir + sound
 
 
 # Returns int: Current highest block number
@@ -65,6 +65,7 @@ def play(file):
 
 
 if __name__ == '__main__':
+    # Initialize sound path and clear terminal
     initialize()
 
     # Get and print current block height
