@@ -11,10 +11,21 @@ block = 'block/'
 hash = 'blocks/tip/hash'
 height = 'blocks/tip/height'
 
-sound = 'sound.wav'
+sound = '/sound.wav'
 
 red = '\033[31m'
 wht = '\033[0m'
+
+
+# Initialize environment
+def initialize():
+    # Clear terminal window
+    os.system('clear')
+
+    # Get file path for sound
+    dir = os.path.dirname(os.path.realpath(__file__))
+    global sound
+    sound = dir + sound
 
 
 # Returns int: Current highest block number
@@ -54,33 +65,32 @@ def play(file):
 
 
 if __name__ == '__main__':
-    # Clear terminal
-    os.system('clear')
+    initialize()
 
     # Get and print current block height
     thisBlock = getHeight()
     print('CURRENT BLOCK:   ' + str(thisBlock))
     play(sound)
 
-    # Get current seconds since last block
-    seconds = getTimeSinceBlock()
+    # Get seconds elapsed since last block
+    elapsed = getTimeSinceBlock()
 
     while True:
-        # Pause, increment 1 second and print
+        # Pause, increment 1 second and print elapsed time
         sleep(1)
-        seconds += 1
-        printTime(seconds)
+        elapsed += 1
+        printTime(elapsed)
 
         # Check for new block every 15 seconds
-        if seconds % 15 == 0:
+        if elapsed % 15 == 0:
             response = getHeight()
 
             # If new block is found
             if response > thisBlock:
                 # Calculate and print elapsed block time
-                elapsed = seconds
-                seconds = getTimeSinceBlock()
-                printTime(elapsed-seconds)
+                seconds = elapsed
+                elapsed = getTimeSinceBlock()
+                printTime(seconds-elapsed)
 
                 # Update and print new block height
                 thisBlock = response
