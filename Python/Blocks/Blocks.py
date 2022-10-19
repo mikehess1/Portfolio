@@ -19,7 +19,7 @@ wht = '\033[0m'
 
 # Initialize environment
 def initialize():
-    # Get file path for sound
+    # Get path for sound file
     global sound
     dir = os.path.dirname(os.path.realpath(__file__))
     sound = dir + sound
