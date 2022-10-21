@@ -21,7 +21,7 @@ if __name__ == '__main__':
         if not (len(byte_val) == 16 or len(byte_val) == 32):
             raise ValueError('Hex string should be 32 or 64 characters')
 
-        # Convert Bytes to BIP39 Mnemonic and Print result
+        # Convert bytes to BIP39 mnemonic and Print result
         mnemonic = bip39.mnemonic_from_bytes(byte_val)
         print('BIP39 Mnemonic: ', mnemonic, '\n')
 
