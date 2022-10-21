@@ -4,4 +4,3 @@ Feel free to provide feedback. Thanks!!
 
 -Mike
 mikehess.net
-hello@mikehess.net
