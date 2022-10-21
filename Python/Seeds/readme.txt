@@ -2,4 +2,4 @@ This program accepts user input which should be a 16 or 32 byte (32 or 64 charac
 
 pip3 install embit
 
- For more information, visit https://embit.rocks
+For more information, visit https://embit.rocks
