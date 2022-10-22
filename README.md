@@ -4,5 +4,5 @@ This repository is for projects to learn and practice coding in Python, Java, Ja
 
 Feel free to provide feedback. Thanks!!
 
--Mike
-mikehess.net
+-Mike<br>
+[mikehess.net](http://mikehess.net)
