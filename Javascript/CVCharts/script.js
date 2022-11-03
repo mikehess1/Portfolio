@@ -46,12 +46,12 @@ setTimeout(() => {
 //
 // Function to get JSON and populate data sets
 //
-async function getData() {
-  $.getJSON("https://covidtracking.com/api/states/daily", function (data) {
-    // Variables to format dates
-    let date = "";
-    let month = "";
-    let day = "";
+// async function getData() {
+//   $.getJSON("https://covidtracking.com/api/states/daily", function (data) {
+//     // Variables to format dates
+//     let date = "";
+//     let month = "";
+//     let day = "";
 
 
 //
