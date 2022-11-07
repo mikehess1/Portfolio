@@ -8,4 +8,4 @@ Since the average target block time is 10 minutes, if the counter exceeds 10 min
 
 When a new block is found, the counter will print the total elapsed time since the last block, then the new block height on the next line. A new counter will begin at 0:00:00. Whenever a block height is found and printed to CLI, an audio sound is played to alert the user. The correct path of the sound file is found using the `os` module and the sound is played using the `playsound` module.
 
-This Python program will run indefinitely, outputting the next block height, the time elapsed for the block to be found and a sound to indicate a new block height was found. See [Blocks.png](https://github.com/mikehess1/Portfolio/blob/master/Python/Blocks/Blocks.png) for a screenshot.
+This Python program will run indefinitely, outputting the next block height, the time elapsed for the block to be found and a sound to indicate a new block height was found. See [Blocks.png](https://github.com/mikehess1/Portfolio/blob/master/Python/Blocks/Blocks.png) and [Blocks.gif](https://github.com/mikehess1/Portfolio/blob/master/Python/Blocks/Blocks.gif) for screenshots
