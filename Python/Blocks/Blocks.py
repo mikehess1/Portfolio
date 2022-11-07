@@ -6,13 +6,16 @@ from time import sleep, time
 from datetime import timedelta
 from playsound import playsound
 
+# API strings
 api_url = 'https://mempool.space/api/'
 block = 'block/'
 hash = 'blocks/tip/hash'
 height = 'blocks/tip/height'
 
+# Sound file string
 sound = '/sound.wav'
 
+# Text color strings
 red = '\033[31m'
 wht = '\033[0m'
 
