@@ -1,6 +1,6 @@
 # Blocks
 
-This Python program uses the `requests` module to make API calls to [mempool.space](https://mempool.space) and retrieve information about the current block height and time it was found.
+This program uses the `requests` module to make API calls to [mempool.space](https://mempool.space) and retrieve information about the current block height and time it was found.
 
 The current block height is printed to CLI and a counter will start counting up from the time the current block was found. Every second, the counter will update and print to CLI. This is done with the help of the `time` and `datetime` modules.
 
