@@ -3,7 +3,7 @@
 This program uses the `requests` module to make GET requests to the Hotwire API at [developer.hotwire.com](http://developer.hotwire.com).
 
 More specifically it is using the Rental Car Shopping API found here:
-http://developer.hotwire.com/docs/read/Rental_Car_Shopping_API.
+http://developer.hotwire.com/docs/read/Rental_Car_Shopping_API
 
 To run this program, you will need to register and obtain an API key.
 
