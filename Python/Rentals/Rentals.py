@@ -1,5 +1,6 @@
 #!/bin/python3
 
+import os
 import requests
 from time import sleep
 
@@ -37,10 +38,14 @@ if __name__ == '__main__':
     # declare price list, first and last hour (in 24 hour format)
     prices = []
     first_hour = 8
-    last_hour = 9
+    last_hour = 18
+    page = 1
 
     # for each hour, first to last, request API data and parse
     for hour in range(first_hour, last_hour + 1):
+
+        print('Processing Page', page, end='')
+        page += 1
 
         # make API get request and store response
         response = getJSON(hour)
@@ -63,12 +68,12 @@ if __name__ == '__main__':
 
         # limit maximum of 5 requests per second
         sleep(.2)
+        print('....DONE')
 
     # print results
-    print()
+    os.system('clear')
     for p in prices:
-        print('$'+'%.2f' % p[0])
-        print("Pickup:", p[1]['PickupTime'])
-        print("Direct Link:\n", p[1]['DeepLink'])
-        # TODO make sure this uses the correct hour HH
+        print('Price: $'+'%.2f' % p[0])
+        print('Pickup:', p[1]['PickupTime'])
+        print('Direct Link:\n' + p[1]['DeepLink'] + '\n')
         print('Search Link:\n' + getSearchLink(p[1]['PickupTime'][0:2]), '\n')
